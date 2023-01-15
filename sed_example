@@ -1,0 +1,26 @@
+'s/-$/-our time/' - Добавить our time, если в конце строки символ -
+Было:	Joseph Robinette Biden Jr, 2021-
+Стало:	Joseph Robinette Biden Jr, 2021-our time
+
+'s/.$//' - Удаление последнего символа в строке
+Было:	George Walker Bush, 2001-2009%
+Стало:	George Walker Bush, 2001-2009
+
+'s/^.*Bush.*$/& <<<<</' - 'Найти' строки где есть слово Bush в середине строки
+Было:
+	Ronald Wilson Reagan, 1981-1989
+	George Herbert Walker Bush, 1989-1993
+	William Jefferson Clinton, 1993-2001
+	George Walker Bush, 2001-2009
+	Barack Hussein Obama, 2009-2017
+	Donald Trump, 2017-2021
+	Joseph Robinette Biden Jr, 2021-
+
+Стало:
+	Ronald Wilson Reagan, 1981-1989
+	George Herbert Walker Bush, 1989-1993 <<<<<
+	William Jefferson Clinton, 1993-2001
+	George Walker Bush, 2001-2009 <<<<<
+	Barack Hussein Obama, 2009-2017
+	Donald Trump, 2017-2021
+	Joseph Robinette Biden Jr, 2021-
